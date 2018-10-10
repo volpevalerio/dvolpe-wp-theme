@@ -1,0 +1,36 @@
+@import "bourbon";
+@import "neat";
+@import "var";
+@import 'grid.scss';
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'header.scss';
+@import 'titles.scss';
+@import 'thumb-container.scss';
+@import 'footer.scss';
+@import 'post.scss';
+@import 'about.scss';
+
+
+html {
+  margin-top: 0 !important;
+}
+
+body{
+  background: #fff;
+}
+
+a{
+  text-decoration: none;
+  color: $black01 !important;
+  &:visited {
+    color: $black01 !important;
+  }
+}
+
+h1{
+  font-weight: unset;
+}
+h2{
+  font-weight: unset;
+}

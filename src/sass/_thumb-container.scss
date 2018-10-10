@@ -1,0 +1,54 @@
+.grid-item{
+  background: red;
+  @include grid-media($grid-mobile){
+    width: 100%;    
+  }
+  @include grid-media($grid-tablet){
+    width: calc(33.3333% - 13.3333px) !important;
+  }
+  img{
+    max-width: 400px;
+    display: block;
+    height: auto;
+    float: left;
+    @include grid-media($grid-mobile){
+      width: 100%;    
+    }
+    @include grid-media($grid-tablet){
+      max-width: 400px;
+    }
+  }
+  &:hover {
+      cursor: pointer;
+      @include grid-media($grid-mobile) {
+        .grid-item--hover{
+          opacity: 0;
+        }
+      }
+      @include grid-media($grid-tablet) {
+        .grid-item--hover{
+          opacity: 1;
+        }
+      }
+  }
+  &--hover{
+    height: 100%;
+    background: #000000;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // &:hover{
+  //   back
+  // }
+}
+
+.container{
+  &--inner{
+    max-width: 33%;
+  }
+}

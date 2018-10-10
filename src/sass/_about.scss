@@ -1,0 +1,84 @@
+.container{
+  &--left{
+    @include grid-media($grid-mobile) {
+      @include grid-column(6);
+    }
+    @include grid-media($grid-tablet){
+      @include grid-column(3);
+      display: block;
+    }
+
+    h2{
+      font-family: $fontLight;
+      margin: 0;
+      line-height: 60px;
+      padding-top: 7px;
+      @include grid-media($grid-mobile){
+        font-size: 28px;
+      }
+    }
+    h3{
+      font-family: $fontLight;
+      font-size: 16px;
+      margin: 0;
+        @include grid-media($grid-mobile){
+        font-size: 28px;
+      }
+      @include grid-media($grid-tablet){
+        font-size: 16px;
+      }
+    }
+  }
+  &--right{
+    @include grid-media($grid-mobile){
+      @include grid-column(6);
+      margin-top: 20px;
+    }
+    @include grid-media($grid-tablet){
+      @include grid-column(9);
+      margin-top: 0;
+    }
+     p{
+       font-family: $fontLight;
+       margin: 0;
+       @include grid-media($grid-mobile){
+         font-size: 28px;
+       }
+       @include grid-media($grid-tablet){
+         font-size: 60px;
+       }
+      a{
+        position: relative;
+        &:hover{
+          cursor: pointer;
+        }
+        &::after{
+          content: '';
+          height: 4px;
+          width: 100%;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          background: #FFCC00;
+        }
+      }
+     }
+  }
+}
+
+.container{
+  //
+
+  &--left{
+
+  }
+}
+
+
+.container{
+//
+}
+
+.container--left{
+//
+}

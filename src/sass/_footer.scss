@@ -1,0 +1,17 @@
+.footer{
+  text-align: left;
+  padding-bottom: 40px;
+  padding-top: 80px;
+  @include grid-container;
+  @include grid-max-size;
+  @include grid-media($grid-mobile) {
+    padding-left: 10px;
+  }
+  @include grid-media($grid-tablet) {
+    padding-left: 0px;
+  }
+  a{    
+    font-family: $fontRegular;
+    font-size: 12px;
+  }
+}

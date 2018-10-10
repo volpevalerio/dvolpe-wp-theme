@@ -1,0 +1,38 @@
+.title{
+  &--post{
+    font-family: $fontLight;
+    color: $black01;
+    font-size: 28px;
+    @include grid-media($grid-mobile){
+      line-height: 36px;
+    }
+    @include grid-media($grid-tablet){
+      line-height: 36px;
+    }
+  }
+  &--menu{
+    font-family: $fontLight;
+    color: $black01;
+    font-size: 20px;
+    &--active{
+      //text-decoration: underline;
+    }
+  }
+  &--white{
+    font-family: $fontRegular;
+    color: #fff;
+  }
+}
+
+.logo{
+  font-family: $fontLight;
+  color: $black01;
+  font-size: 20px;
+  margin: 0;
+}
+
+.paragraph{
+  font-family: $fontLight;
+  color: $black01;
+  font-size: 20px;
+}

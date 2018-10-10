@@ -1,0 +1,89 @@
+.post{
+  display: flex;
+    &__title{
+    display: flex;
+    h1{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    span{
+      font-family: $fontLight;
+      font-size: 12px;
+    }
+  }
+  &__separator{
+    width: 25%;
+    border: 0.5px solid black;
+    margin-bottom: 15px;
+  }
+  &__content{
+    @include grid-max-size;
+    @include grid-container;
+    h4{
+      margin: 0;
+      //line-height: 12px;
+    }
+    &--left{
+      @include grid-media($grid-mobile){
+        display: none;
+      }
+      @include grid-media($grid-tablet){
+        @include grid-column(4);
+        display: block;
+      }
+      //@include grid-collapse;
+
+    }
+    &--full{
+      @include grid-media($grid-mobile){
+        @include grid-column(6);
+        display: block;
+        margin-top: 40px;
+      }
+      @include grid-media($grid-tablet){
+        @include grid-column(4);
+        display: none;
+      }
+    }
+  }
+  &__description{
+    @include grid-media($grid-mobile){
+      display: none;
+    }
+    @include grid-media($grid-tablet){
+      display: block;
+    }
+    p{
+      font-family: $fontLight;
+      color: $black01;
+      font-size: 28px;
+      margin: 0;
+    }
+
+    &--mobile{
+      @include grid-media($grid-mobile){
+        display: block;
+      }
+      @include grid-media($grid-tablet){
+        display: none;
+      }
+    }
+  }
+  &__gallery{
+    @include grid-media($grid-mobile){
+      @include grid-column(6);
+      margin-top: 0;
+    }
+    @include grid-media($grid-tablet){
+      @include grid-column(7);
+      @include grid-push(1);
+      margin-top: 0;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &__title{
+    margin-bottom: 20px;
+  }
+}

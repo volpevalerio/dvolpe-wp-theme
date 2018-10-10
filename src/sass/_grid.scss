@@ -1,0 +1,101 @@
+//@import "bourbon";
+//@import "bourbonNeat";
+
+$neat-grid: (
+  columns: 12,
+  gutter: 20px,
+  color: rgba(#00d4ff, 0.15),
+);
+
+$neat-grid-10: (
+  columns: 10,
+  gutter: 20px,
+  color: rgba(#ff0000, 0.15),
+);
+
+$grid-mobile-landscape: (
+  columns: 12,
+  gutter: 20px,
+  media: 480px,
+);
+
+$grid-mobile: (
+  columns: 6,
+  gutter: 10px,
+  media: 320px,
+);
+
+$grid-mobile-plus: (
+  columns: 6,
+  gutter: 20px,
+  media: 375px,
+);
+
+$neat-grid-mobile: (
+  columns: 6,
+  gutter: 20px,
+  media: 480px,
+);
+
+$grid-tablet: (
+  columns: 12,
+  gutter: 20px,
+  media: 768px,
+);
+
+$grid-medium: (
+  columns: 12,
+  gutter: 20px,
+  media: 992px,
+);
+
+$grid-ipad-pro: (
+  columns: 12,
+  gutter: 20px,
+  media: 1024px,
+);
+
+$grid-large: (
+  columns: 12,
+  gutter: 20px,
+  media: 1200px,
+);
+
+$grid-x-large: (
+  columns: 12,
+  gutter: 20px,
+  media: 1500px,
+);
+
+@mixin grid-max-size($size: 1280px) {
+  max-width: $size;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container{
+  @include grid-media($grid-mobile){
+    @include grid-max-size;
+    @include grid-container;
+  }
+  @include grid-media($grid-tablet){
+    max-width: calc(1280px - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__inner{
+    @include grid-media($grid-mobile){
+      @include grid-column(6);
+    }
+    @include grid-media($grid-tablet){
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+.grid-container{
+  @include grid-max-size;
+  @include grid-container;
+}

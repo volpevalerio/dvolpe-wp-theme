@@ -1,0 +1,97 @@
+.header{
+  @include grid-max-size;
+  @include grid-container;
+  //position: relative;
+  //text-align: center;
+  display: flex;
+  justify-content: space-between;
+  
+  @include grid-media($grid-mobile){
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+  @include grid-media($grid-tablet){
+    padding-top: 65px;
+    padding-bottom: 80px;
+    flex-direction: row;
+  }
+  .logo{
+    font-size: 28px;
+    @include grid-media($grid-mobile){
+      margin-left: 10px;
+    }
+    @include grid-media($grid-tablet){
+      margin-left: 20px;
+    }
+  }
+  &__menu{
+    margin-left: auto;
+    margin-right: 20px;
+    @include grid-media($grid-mobile){
+      flex-direction: column;
+      display: flex;
+      //margin-right: auto;
+      margin-left: 0;
+    }
+    @include grid-media($grid-tablet){
+      flex-direction: row;
+      display: flex;
+      //margin-right: auto;
+      margin-left: auto;
+    }
+    a {
+      @include grid-media($grid-mobile){
+        margin-left: 10px;
+        width: auto;
+        margin-right: auto;
+        font-size: 28px;
+      }
+      @include grid-media($grid-tablet){
+        padding-left: 20px;
+      }
+    }
+  }
+  .title--menu{
+    position: relative;
+    &::after{
+      content: '';
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      
+      background: transparent;
+      @include grid-media($grid-mobile){
+        width: 100%;
+        left: 0;
+      }
+      @include grid-media($grid-tablet){
+        width: calc(100% - 20px);
+        left: 20px;
+      }
+    }
+    &:hover{
+      cursor: pointer;
+      &::after{
+        background: $black01;
+      }
+    }
+    &--active{
+       &::after{
+        content: '';
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        background: $black01;
+        @include grid-media($grid-mobile){
+          width: 100%;
+          left: 0;
+        }
+        @include grid-media($grid-tablet){
+          width: calc(100% - 20px);
+          left: 20px;
+        }
+      }
+    }
+  }
+}
