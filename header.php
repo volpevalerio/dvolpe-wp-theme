@@ -8,8 +8,6 @@
     <?php wp_head(); ?>
     <?php define('ROOTPATH', __DIR__); ?>
     <script src="https://cdn.jsdelivr.net/npm/macy@2.3.0/dist/macy.min.js"></script>
-    <script type="text/javascript"> var _iub = _iub || []; _iub.csConfiguration = {"lang":"it","siteId":1398022,"cookiePolicyId":56351435,"banner":{"textColor":"#fff","backgroundColor":"#1D1D1B", "fontFamily":"PxGroteskLight"},"cookiePolicyInOtherWindow":true}; </script><script type="text/javascript" src="//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js" charset="UTF-8" async></script>    
-  </head>
   <body>
     <?
       $themeRoot = get_stylesheet_directory_uri();
